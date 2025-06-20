@@ -51,6 +51,11 @@
       align-items: flex-start;
       border-bottom: 1px #E5E8EB solid;
     }
+    .header-logo {
+      height: 22px; /* Half the original size */
+      width: auto; /* Maintain aspect ratio */
+      display: block;
+    }
     .highlight-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -459,7 +464,7 @@
 <body>
   <div class="main-wrapper">
     <header class="header">
-      <div class="header-title">Generative AI Study Group</div>
+      <img src="images/header.svg" alt="Generative AI Study Group" class="header-logo" />
     </header>
     <main style="width:100%; background: #05070A;">
       <!-- メインビジュアル -->
