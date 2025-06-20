@@ -183,14 +183,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // requestAnimationFrame を使用してクラス追加のタイミングを調整
-        requestAnimationFrame(() => {
-          entry.target.classList.add('visible');
-        });
+        // より遅延を加えてフェードインを実感しやすくする
+        setTimeout(() => {
+          requestAnimationFrame(() => {
+            entry.target.classList.add('visible');
+          });
+        }, 165); // 150ms遅延を追加
         obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 }); /* Lowered threshold, delay handled by CSS */
+  }, { threshold: 0.3 }); /* より多くの要素が見えてからトリガー */
   fadeEls.forEach(el => observer.observe(el));
 });
 </script>
