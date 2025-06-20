@@ -56,6 +56,7 @@
       width: auto; /* Maintain aspect ratio */
       display: block;
     }
+    
     .highlight-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -469,7 +470,14 @@
     <main style="width:100%; background: #05070A;">
       <!-- メインビジュアル -->
       <section class="hero" style="width:100%; display:flex; flex-direction:column; align-items:center;">
-        <img src="images/hero-visual.png" alt="メインビジュアル" class="hero-img" />
+        <img src="images/hero-visual.png" alt="メインビジュアル" class="hero-img" id="hero-img" style="cursor: pointer;" title="🎵 Click for ambient BGM" />
+        <!-- BGM Audio Element -->
+        <audio id="bgm-audio" loop preload="auto">
+          <source src="audio/bgm.mp3" type="audio/mpeg">
+          <source src="audio/bgm.ogg" type="audio/ogg">
+          <source src="audio/bgm.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
       </section>
       <!-- Overview -->
       <section id="overview" class="section">
@@ -570,6 +578,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.3 }); /* より多くの要素が見えてからトリガー */
   fadeEls.forEach(el => observer.observe(el));
+  
+  // BGM機能
+  const bgmAudio = document.getElementById('bgm-audio');
+  const heroImage = document.getElementById('hero-img');
+  let isPlaying = false;
+
+  if (heroImage && bgmAudio) {
+    heroImage.addEventListener('click', () => {
+      if (!isPlaying) {
+        // BGM再生
+        bgmAudio.play().then(() => {
+          isPlaying = true;
+          heroImage.title = '🔇 Click to pause BGM';
+        }).catch((error) => {
+          console.log('BGM playback failed:', error);
+        });
+      } else {
+        // BGM一時停止
+        bgmAudio.pause();
+        isPlaying = false;
+        heroImage.title = '🎵 Click for ambient BGM';
+      }
+    });
+
+    // オーディオが終了した時の処理（ループなので通常は発生しない）
+    bgmAudio.addEventListener('ended', () => {
+      isPlaying = false;
+      heroImage.title = '🎵 Click for ambient BGM';
+    });
+  }
 });
 </script>
 
