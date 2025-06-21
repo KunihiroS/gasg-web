@@ -8,9 +8,6 @@ This is the official website for the Generative AI Study Group (GASG), a team of
 
 The Generative AI Study Group is a non-profit organization based at the AITeC consortium within the National Institute of Advanced Industrial Science and Technology (AIST). We focus on AI education, research collaboration, and industry outreach through educational workshops, public speaking, technical consulting, and community building.
 
-## Custom domain
-https://www.gasg.server-on.net/
-
 ## Website Features
 
 - **Responsive Design**: Mobile-friendly layout that adapts to different screen sizes
