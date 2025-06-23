@@ -114,7 +114,7 @@
     /* SoundCloud Player Styling */
     .soundcloud-player {
       width: 100%;
-      max-width: 960px;
+      max-width: 944px;
       margin: 24px auto 0 auto;
       padding: 0;
       box-sizing: border-box;
@@ -131,6 +131,68 @@
     .soundcloud-player iframe {
       border-radius: 8px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Messages Section */
+    .messages-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 944px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .message-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      gap: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .message-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.12);
+      transform: translateY(-1px);
+    }
+
+    .message-avatar {
+      flex-shrink: 0;
+    }
+
+    .message-avatar img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .message-content {
+      flex: 1;
+    }
+
+    .message-author {
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 0 0 4px 0;
+    }
+
+    .message-title {
+      font-size: 0.85em;
+      color: #cccccc;
+      margin: 0 0 12px 0;
+      font-style: italic;
+    }
+
+    .message-text {
+      font-size: 0.95em;
+      line-height: 1.5;
+      color: #e0e0e0;
+      margin: 0;
     }
     
     /* プラネットナイン（第9惑星）エフェクト - ダークエネルギー風 */
@@ -479,6 +541,7 @@
       }
       .soundcloud-player {
         padding: 0;
+        margin: 24px 2vw 0 2vw;
       }
       .soundcloud-player iframe {
         height: 200px; /* モバイルでは高さを調整 */
@@ -486,6 +549,28 @@
       img {
         max-width: 100%;
         height: auto !important;
+      }
+      
+      /* Messages for mobile */
+      .messages-grid {
+        padding: 0;
+        margin: 0 2vw;
+      }
+      
+      .message-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px;
+        gap: 12px;
+      }
+      
+      .message-avatar {
+        align-self: center;
+      }
+      
+      .message-avatar img {
+        width: 50px;
+        height: 50px;
       }
     }
   </style>
@@ -550,6 +635,41 @@
         <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2087507625&color=%230e0b0d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
         <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/kunihiro-sugiyama" title="Kunihiro Sugiyama" target="_blank" style="color: #cccccc; text-decoration: none;">Kunihiro Sugiyama</a> · <a href="https://soundcloud.com/kunihiro-sugiyama/generative-ai-study-group" title="Generative AI Study Group Introduction" target="_blank" style="color: #cccccc; text-decoration: none;">Generative AI Study Group Introduction</a></div>
       </div>
+      <!-- Messages -->
+      <section id="messages" class="section">
+        <h2 class="section-title">Messages</h2>
+        <div class="fade-in section-content">
+          <div class="messages-grid">
+            <div class="message-card">
+              <div class="message-avatar">
+                <img src="https://via.placeholder.com/80x80/4a4a4a/ffffff?text=A" alt="Expert A" />
+              </div>
+              <div class="message-content">
+                <h3 class="message-author">Dr. Alex Johnson</h3>
+                <p class="message-title">AI Research Director</p>
+                <p class="message-text">
+                  「生成AIの発展は私たちの想像を超えるスピードで進んでいます。このような勉強会で最新の知見を共有することは、
+                  業界全体の発展にとって非常に重要です。皆さんの学習意欲と探究心に感銘を受けています。」
+                </p>
+              </div>
+            </div>
+            <div class="message-card">
+              <div class="message-avatar">
+                <img src="https://via.placeholder.com/80x80/4a4a4a/ffffff?text=B" alt="Expert B" />
+              </div>
+              <div class="message-content">
+                <h3 class="message-author">Sarah Chen</h3>
+                <p class="message-title">Machine Learning Engineer</p>
+                <p class="message-text">
+                  「実践的なAI技術の習得には、理論と実装の両方を学ぶことが不可欠です。
+                  このコミュニティでの活発な議論と知識交換が、皆さんのスキル向上に大きく貢献することを確信しています。
+                  共に学び、共に成長していきましょう。」
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
 
