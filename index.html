@@ -133,68 +133,6 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
     
-    /* Messages Section */
-    .messages-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      max-width: 944px;
-      margin: 0 auto;
-      padding: 0;
-    }
-
-    .message-card {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 8px;
-      padding: 20px;
-      display: flex;
-      gap: 16px;
-      transition: all 0.3s ease;
-    }
-
-    .message-card:hover {
-      background: rgba(255, 255, 255, 0.05);
-      border-color: rgba(255, 255, 255, 0.12);
-      transform: translateY(-1px);
-    }
-
-    .message-avatar {
-      flex-shrink: 0;
-    }
-
-    .message-avatar img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .message-content {
-      flex: 1;
-    }
-
-    .message-author {
-      font-size: 1.1em;
-      font-weight: 600;
-      color: #ffffff;
-      margin: 0 0 4px 0;
-    }
-
-    .message-title {
-      font-size: 0.85em;
-      color: #cccccc;
-      margin: 0 0 12px 0;
-      font-style: italic;
-    }
-
-    .message-text {
-      font-size: 0.95em;
-      line-height: 1.5;
-      color: #e0e0e0;
-      margin: 0;
-    }
-    
     /* プラネットナイン（第9惑星）エフェクト - ダークエネルギー風 */
     .hero {
       position: relative;
@@ -551,19 +489,6 @@
         height: auto !important;
       }
       
-      /* Messages for mobile */
-      .messages-grid {
-        padding: 0;
-        margin: 0 2vw;
-      }
-      
-      .message-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 16px;
-        gap: 12px;
-      }
-      
       .message-avatar {
         align-self: center;
       }
@@ -640,32 +565,13 @@
         <h2 class="section-title">Messages</h2>
         <div class="fade-in section-content">
           <div class="messages-grid">
-            <div class="message-card">
-              <div class="message-avatar">
-                <img src="https://via.placeholder.com/80x80/4a4a4a/ffffff?text=A" alt="Expert A" />
-              </div>
-              <div class="message-content">
-                <h3 class="message-author">Dr. Alex Johnson</h3>
-                <p class="message-title">AI Research Director</p>
-                <p class="message-text">
-                  「生成AIの発展は私たちの想像を超えるスピードで進んでいます。このような勉強会で最新の知見を共有することは、
-                  業界全体の発展にとって非常に重要です。皆さんの学習意欲と探究心に感銘を受けています。」
-                </p>
-              </div>
+            <div class="team-member">
+              <img src="images/message_01.png" alt="Expert A" class="team-img" />
+              <div class="team-profile toml-block">[Profile]<br />Name = "Dr. Alex Johnson"<br />Position = "AI Research Director"<br />Message = "生成AIの発展は私たちの想像を超えるスピードで進んでいます。このような勉強会で最新の知見を共有することは、業界全体の発展にとって非常に重要です。皆さんの学習意欲と探究心に感銘を受けています。"</div>
             </div>
-            <div class="message-card">
-              <div class="message-avatar">
-                <img src="https://via.placeholder.com/80x80/4a4a4a/ffffff?text=B" alt="Expert B" />
-              </div>
-              <div class="message-content">
-                <h3 class="message-author">Sarah Chen</h3>
-                <p class="message-title">Machine Learning Engineer</p>
-                <p class="message-text">
-                  「実践的なAI技術の習得には、理論と実装の両方を学ぶことが不可欠です。
-                  このコミュニティでの活発な議論と知識交換が、皆さんのスキル向上に大きく貢献することを確信しています。
-                  共に学び、共に成長していきましょう。」
-                </p>
-              </div>
+            <div class="team-member">
+              <img src="images/message_02.png" alt="Expert B" class="team-img" />
+              <div class="team-profile toml-block">[Profile]<br />Name = "Sarah Chen"<br />Position = "Machine Learning Engineer"<br />Message = "実践的なAI技術の習得には、理論と実装の両方を学ぶことが不可欠です。このコミュニティでの活発な議論と知識交換が、皆さんのスキル向上に大きく貢献することを確信しています。共に学び、共に成長していきましょう。"</div>
             </div>
           </div>
         </div>
