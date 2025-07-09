@@ -2,7 +2,11 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device    /* ロード直後の状態 - モザイク効果 */
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generative AI Study Group | GASG</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+  <style>
+    /* ロード直後の状態 - モザイク効果 */
     .hero-img:not(.loaded) {
       filter: blur(25px);
       background: 
@@ -19,10 +23,7 @@
           rgba(0,0,0,0.5) 75%);
       background-size: 80px 80px, 110px 110px;
       animation: mosaicDissolve 25s linear forwards;
-    }ale=1.0">
-  <title>Generative AI Study Group | GASG</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
-  <style>
+    }
     body {
       background: #05070A;
       margin: 0;
@@ -564,14 +565,63 @@
         <div class="fade-in section-content voices-block" style="display: flex; flex-direction: column; align-items: flex-start;">
           <img src="images/voices.png" alt="Voices" class="team-img" />
           <div class="toml-block" style="width:100%; max-width: 944px;">
-[voices]<br />
-# Participant feedback and comments<br />
+[Participant feedback and comments]<br />
 voices = [<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"いつも有難うございます。圧倒されております。",<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"アーカイブまで残してくださり、ありがとうございます。",<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"業界の異なる方と、普段は聞かない話が色々とできて面白かったです。"<br />
 &nbsp;&nbsp;&nbsp;&nbsp;"いつも大変参考になる情報をありがとうございます。無料で開催していただけることに感謝です。",<br />
 ]
+          </div>
+        </div>
+      </section>
+      <!-- Guests Section -->
+      <section id="guests" class="section">
+        <h2 class="section-title">Guest Speakers</h2>
+        <div class="fade-in section-content guest-list">
+          <div class="guest-category">
+            <h3>Public Sector</h3>
+            <ul>
+              <li>神戸市デジタル戦略部 元村優介氏, 三嶋潤平氏, 深水夏樹氏</li>
+            </ul>
+          </div>
+          <div class="guest-category">
+            <h3>Academia</h3>
+            <ul>
+              <li>明星大学経営学部 安岡寛道教授</li>
+              <li>明治学院大学 情報数理学部 永田毅教授</li>
+              <li>神戸大学附属中等教育学校 林兵馬教諭</li>
+              <li>京都華頂大学准教授 積 高之 氏</li>
+            </ul>
+          </div>
+          <div class="guest-category">
+            <h3>Industry</h3>
+            <ul>
+              <li>株式会社LangCore 代表取締役 北原麦郎氏</li>
+              <li>ミノル国際特許事務所 弁理士</li>
+              <li>株式会社エンライトオン 代表取締役 西尾啓氏</li>
+              <li>株式会社chipper 代表取締役 十時悠径氏</li>
+              <li>BlendAI CEO 小宮自由氏</li>
+              <li>株式会社スキルアップNeXt 取締役COO 福島昌吾氏</li>
+              <li>株式会社エボルブ 代表取締役 安松亮氏</li>
+              <li>株式会社システムサポート AI/アナリティクスグループ 古城道崇氏</li>
+              <li>株式会社NTTデータ数理システム 武藤雅基氏</li>
+              <li>神戸新聞社DX推進局ユーザー・コミュニケーション部 武藤邦生氏, 奥平裕佑氏</li>
+            </ul>
+          </div>
+          <div class="guest-category">
+            <h3>Others</h3>
+            <ul>
+              <li>PROTO.JP氏</li>
+              <li>システムエンジニア 土屋明生氏</li>
+              <li>雲雀丘学園高等学校 二年生 平山結愛氏</li>
+              <li>神戸大学附属中等教育学校 五年生 竹内宏氏, 四年生 大竹優輝氏</li>
+              <li>岩手県ILC解説普及員 佐藤清忠氏</li>
+              <li>CDLE名古屋 サブリーダー 宮野孝汰氏</li>
+              <li>慶應義塾大学 清水駿太氏, 八木颯斗氏</li>
+              <li>兵庫教育大学大学院 修士課程 黒田一之氏</li>
+              <li>東京大学大学院 情報理工学系研究科 数理情報学専攻 修士一年 伊藤 武 氏</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -588,6 +638,34 @@ voices = [<br />
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Guest List Styles */
+.guest-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  text-align: left;
+  width: 100%;
+  max-width: 944px;
+  margin: 0 auto;
+}
+
+.guest-category h3 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  font-size: 1.2em;
+}
+
+.guest-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.guest-category li {
+  margin-bottom: 8px;
+  line-height: 1.6;
 }
 /* bodyにanimations-readyクラスが付いたら、visibleになった要素のトランジション遅延を設定 */
 body.animations-ready .fade-in.visible {
