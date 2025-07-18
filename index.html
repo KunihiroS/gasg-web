@@ -80,8 +80,18 @@
       width: calc(50% - 12px);
     }
     .highlight-img-full {
-      flex-basis: 100%;
       width: 100%;
+      margin-bottom: 24px;
+    }
+    
+    .highlight-pair {
+      display: flex;
+      gap: 24px;
+      width: 100%;
+    }
+    
+    .highlight-pair .highlight-img {
+      width: calc(50% - 12px);
     }
     .team-img { /* For spacing below team member images */
       display: block;
@@ -549,12 +559,14 @@
       <hr class="section-divider" />
       <!-- Highlight -->
       <section id="highlight" class="section">
-        <h2 class="section-title">Highlight</h2>
-        <div class="fade-in highlight-gallery">
-          <img src="images/highlight-01.png" alt="Highlight1" class="highlight-img highlight-img-half" style="height:460px;" />
-          <img src="images/highlight-02.png" alt="Highlight2" class="highlight-img highlight-img-half" style="height:460px;" />
+        <h2 class="section-title">Highlight (On site activities)</h2>
+        <div class="fade-in">
           <img src="images/highlight-03.png" alt="Highlight3" class="highlight-img highlight-img-full" style="height:531px;" />
           <img src="images/highlight-04.png" alt="Highlight4" class="highlight-img highlight-img-full" style="height:629px;" />
+          <div class="highlight-pair">
+            <img src="images/highlight-02.png" alt="Highlight2" class="highlight-img" style="height:460px;" />
+            <img src="images/highlight-01.png" alt="Highlight1" class="highlight-img" style="height:460px;" />
+          </div>
         </div>
       </section>
       <hr class="section-divider" />
