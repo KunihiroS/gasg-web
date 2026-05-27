@@ -9,17 +9,17 @@
     /* ロード直後の状態 - モザイク効果 */
     .hero-img:not(.loaded) {
       filter: blur(25px);
-      background: 
-        repeating-conic-gradient(from 0deg at 50% 50%, 
-          rgba(25,25,112,0.4) 0deg, 
-          rgba(72,61,139,0.3) 10deg, 
-          rgba(139,69,19,0.25) 20deg, 
-          transparent 30deg) 
+      background:
+        repeating-conic-gradient(from 0deg at 50% 50%,
+          rgba(25,25,112,0.4) 0deg,
+          rgba(72,61,139,0.3) 10deg,
+          rgba(139,69,19,0.25) 20deg,
+          transparent 30deg)
         no-repeat center/cover,
-        linear-gradient(45deg, 
-          rgba(0,0,0,0.5) 25%, 
-          transparent 25%, 
-          transparent 75%, 
+        linear-gradient(45deg,
+          rgba(0,0,0,0.5) 25%,
+          transparent 25%,
+          transparent 75%,
           rgba(0,0,0,0.5) 75%);
       background-size: 80px 80px, 110px 110px;
       animation: mosaicDissolve 25s linear forwards;
@@ -57,7 +57,7 @@
       width: auto; /* Maintain aspect ratio */
       display: block;
     }
-    
+
     .highlight-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -83,13 +83,13 @@
       width: 100%;
       margin-bottom: 24px;
     }
-    
+
     .highlight-pair {
       display: flex;
       gap: 24px;
       width: 100%;
     }
-    
+
     .highlight-pair .highlight-img {
       width: calc(50% - 12px);
     }
@@ -126,7 +126,7 @@
       border-radius: 4px;      /* Rounded corners for the block */
       color: #f0f0f0; /* Ensuring text is light on dark background */
     }
-    
+
     /* SoundCloud Player Styling */
     .soundcloud-player {
       width: 100%;
@@ -138,56 +138,56 @@
       transform: translateY(20px);
       transition: opacity 1.5s ease-out, transform 1.5s ease-out;
     }
-    
+
     .soundcloud-player.fade-in.visible {
       opacity: 1;
       transform: translateY(0);
     }
-    
+
     .soundcloud-player iframe {
       border-radius: 8px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
-    
+
     /* プラネットナイン（第9惑星）エフェクト - ダークエネルギー風 */
     .hero {
       position: relative;
       overflow: hidden;
     }
-    
+
     .hero-img {
       position: relative;
       z-index: 3;
-      animation: 
+      animation:
         darkMatter 8s ease-in-out infinite,
         randomPulse1 5.7s ease-in-out infinite 0.3s,
         randomPulse2 7.2s ease-in-out infinite 1.8s;
       transition: all 0.4s ease;
-      
+
       /* 初期ロード時のモザイクエフェクト */
       filter: blur(0px) pixelate(0px);
       opacity: 1;
     }
-    
+
     /* ロード直後の状態 - モザイク効果 */
     .hero-img:not(.loaded) {
       filter: blur(25px);
-      background: 
-        repeating-conic-gradient(from 0deg at 50% 50%, 
-          rgba(25,25,112,0.4) 0deg, 
-          rgba(72,61,139,0.3) 10deg, 
-          rgba(139,69,19,0.25) 20deg, 
-          transparent 30deg) 
+      background:
+        repeating-conic-gradient(from 0deg at 50% 50%,
+          rgba(25,25,112,0.4) 0deg,
+          rgba(72,61,139,0.3) 10deg,
+          rgba(139,69,19,0.25) 20deg,
+          transparent 30deg)
         no-repeat center/cover,
-        linear-gradient(45deg, 
-          rgba(0,0,0,0.5) 25%, 
-          transparent 25%, 
-          transparent 75%, 
+        linear-gradient(45deg,
+          rgba(0,0,0,0.5) 25%,
+          transparent 25%,
+          transparent 75%,
           rgba(0,0,0,0.5) 75%);
       background-size: 80px 80px, 110px 110px;
       animation: mosaicDissolve 5s linear forwards;
     }
-    
+
     /* モザイクから通常状態への移行アニメーション - 前半線形、後半超緩慢減衰 */
     @keyframes mosaicDissolve {
       /* 前半：線形変化（0-70%） */
@@ -231,7 +231,7 @@
         background-size: 24px 24px, 54px 54px;
         opacity: 0.85;
       }
-      
+
       /* 後半：超緩慢減衰（70-100%） - 極めて細かい変化 */
       75% {
         filter: blur(0.6px);
@@ -314,11 +314,11 @@
         opacity: 1;
       }
     }
-    
+
     .hero-img:hover {
       transform: scale(1.02);
     }
-    
+
     /* ダークエネルギーの波動 */
     .hero::before {
       content: '';
@@ -327,17 +327,17 @@
       left: -20%;
       right: -20%;
       bottom: -20%;
-      background: 
-        radial-gradient(ellipse at center, 
-          rgba(0,0,0,0.4) 0%, 
-          rgba(25,25,112,0.15) 30%, 
-          rgba(72,61,139,0.1) 50%, 
-          rgba(0,0,0,0.2) 70%, 
+      background:
+        radial-gradient(ellipse at center,
+          rgba(0,0,0,0.4) 0%,
+          rgba(25,25,112,0.15) 30%,
+          rgba(72,61,139,0.1) 50%,
+          rgba(0,0,0,0.2) 70%,
           transparent 100%);
       animation: darkEnergy 12s ease-in-out infinite;
       z-index: 1;
     }
-    
+
     /* 暗黒物質の渦 */
     .hero::after {
       content: '';
@@ -346,21 +346,21 @@
       left: 10%;
       right: 10%;
       bottom: 10%;
-      background: 
-        conic-gradient(from 0deg at 50% 50%, 
-          transparent 0deg, 
-          rgba(139,69,19,0.1) 45deg, 
-          rgba(25,25,112,0.08) 90deg, 
-          transparent 135deg, 
-          rgba(72,61,139,0.06) 180deg, 
-          transparent 225deg, 
-          rgba(139,69,19,0.05) 270deg, 
-          transparent 315deg, 
+      background:
+        conic-gradient(from 0deg at 50% 50%,
+          transparent 0deg,
+          rgba(139,69,19,0.1) 45deg,
+          rgba(25,25,112,0.08) 90deg,
+          transparent 135deg,
+          rgba(72,61,139,0.06) 180deg,
+          transparent 225deg,
+          rgba(139,69,19,0.05) 270deg,
+          transparent 315deg,
           transparent 360deg);
       animation: darkSpiral 20s linear infinite;
       z-index: 2;
     }
-    
+
     @keyframes darkMatter {
       0%, 100% {
         opacity: 0.85;
@@ -393,7 +393,7 @@
         filter: blur(0.7px);
       }
     }
-    
+
     @keyframes randomPulse1 {
       0%, 100% {
         opacity: 1;
@@ -421,7 +421,7 @@
         filter: blur(0.7px);
       }
     }
-    
+
     @keyframes randomPulse2 {
       0%, 100% {
         opacity: 1;
@@ -454,7 +454,7 @@
         filter: blur(0.5px);
       }
     }
-    
+
     @keyframes darkEnergy {
       0%, 100% {
         transform: scale(1) rotate(0deg);
@@ -469,7 +469,7 @@
         opacity: 0.8;
       }
     }
-    
+
     @keyframes darkSpiral {
       from {
         transform: rotate(0deg);
@@ -504,11 +504,11 @@
         max-width: 100%;
         height: auto !important;
       }
-      
+
       .message-avatar {
         align-self: center;
       }
-      
+
       .message-avatar img {
         width: 50px;
         height: 50px;
@@ -651,6 +651,7 @@
               <li>宮城教育大学大学院<br />佐藤駿氏</li>
               <li>TMI総合法律事務所 弁護士<br />蕪城雄一郎氏</li>
               <li>AI駆動開発勉強会神戸支部<br />増森聡明氏</li>
+              <li>AI 駆動開発勉強会/AI 駆動開発コンソーシアム<br />鈴木章太郎氏</li>
             </ul>
           </div>
         </div>
@@ -774,7 +775,7 @@ document.addEventListener('DOMContentLoaded', () => {
         heroImg.classList.add('loaded');
       }, 5000); // 5秒アニメーション完了後に.loadedクラスを追加
     });
-    
+
     // 既にロードされている場合（キャッシュなど）
     if (heroImg.complete) {
       setTimeout(() => {
@@ -787,7 +788,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     document.body.classList.add('animations-ready');
   }, 100); // 例えば100ミリ秒後。この値は調整可能。
-  
+
   const fadeEls = document.querySelectorAll('.fade-in');
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
@@ -803,7 +804,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.3 }); /* より多くの要素が見えてからトリガー */
   fadeEls.forEach(el => observer.observe(el));
-  
+
   // BGM機能
   const bgmAudio = document.getElementById('bgm-audio');
   const heroImage = document.getElementById('hero-img');
