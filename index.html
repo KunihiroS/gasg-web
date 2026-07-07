@@ -90,6 +90,10 @@
       width: 100%;
     }
 
+    #highlight > div > a.fade-in {
+      display: block;
+    }
+
     .highlight-pair .highlight-img {
       width: calc(50% - 12px);
     }
@@ -567,14 +571,14 @@
       <!-- Highlight -->
       <section id="highlight" class="section">
         <h2 class="section-title">Highlight (On site activities)</h2>
-        <div class="fade-in">
-          <a href="https://www.ai-tech-c.jp/generative-ai-study-group-gasg/#072" target="_blank"><img src="images/highlight-06.jpg" alt="Highlight6" class="highlight-img highlight-img-full" /></a>
-          <a href="https://www.ai-tech-c.jp/generative-ai-study-group-gasg/#063" target="_blank"><img src="images/highlight-05.png" alt="Highlight5" class="highlight-img highlight-img-full" /></a>
-          <a href="https://www.ai-tech-c.jp/generative-ai-study-group-gasg/#025" target="_blank"><img src="images/highlight-03.png" alt="Highlight3" class="highlight-img highlight-img-full" style="height:531px;" /></a>
-          <a href="https://www.ai-tech-c.jp/generative-ai-study-group-gasg/#027" target="_blank"><img src="images/highlight-04.png" alt="Highlight4" class="highlight-img highlight-img-full" style="height:629px;" /></a>
+        <div>
+          <a class="fade-in" href="https://www.ai-tech-c.jp/generative-ai-study-group-gasg/#072" target="_blank"><img src="images/highlight-06.jpg" alt="Highlight6" class="highlight-img highlight-img-full" /></a>
+          <a class="fade-in" href="https://www.ai-tech-c.jp/generative-ai-study-group-gasg/#063" target="_blank"><img src="images/highlight-05.png" alt="Highlight5" class="highlight-img highlight-img-full" /></a>
+          <a class="fade-in" href="https://www.ai-tech-c.jp/generative-ai-study-group-gasg/#025" target="_blank"><img src="images/highlight-03.png" alt="Highlight3" class="highlight-img highlight-img-full" style="height:531px;" /></a>
+          <a class="fade-in" href="https://www.ai-tech-c.jp/generative-ai-study-group-gasg/#027" target="_blank"><img src="images/highlight-04.png" alt="Highlight4" class="highlight-img highlight-img-full" style="height:629px;" /></a>
           <div class="highlight-pair">
-            <a href="https://www.ai-tech-c.jp/generative-ai-study-group-gasg/#038" target="_blank"><img src="images/highlight-02.png" alt="Highlight2" class="highlight-img" style="height:460px;" /></a>
-            <a href="https://www.ai-tech-c.jp/%e5%8f%97%e8%b3%9e%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%ef%bc%882023%e5%b9%b4%e5%ba%a6%ef%bc%89/" target="_blank"><img src="images/highlight-01.png" alt="Highlight1" class="highlight-img" style="height:460px;" /></a>
+            <a class="fade-in" href="https://www.ai-tech-c.jp/generative-ai-study-group-gasg/#038" target="_blank"><img src="images/highlight-02.png" alt="Highlight2" class="highlight-img" style="height:460px;" /></a>
+            <a class="fade-in" href="https://www.ai-tech-c.jp/%e5%8f%97%e8%b3%9e%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%ef%bc%882023%e5%b9%b4%e5%ba%a6%ef%bc%89/" target="_blank"><img src="images/highlight-01.png" alt="Highlight1" class="highlight-img" style="height:460px;" /></a>
           </div>
         </div>
       </section>
@@ -802,7 +806,7 @@ document.addEventListener('DOMContentLoaded', () => {
         obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.3 }); /* より多くの要素が見えてからトリガー */
+  }, { threshold: 0.1 }); /* 低いビューポートでも各要素が確実にトリガーされるようにする */
   fadeEls.forEach(el => observer.observe(el));
 
   // BGM機能
